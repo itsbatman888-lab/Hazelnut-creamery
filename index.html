@@ -16,7 +16,6 @@
         .font-serif {
             font-family: 'Playfair Display', serif;
         }
-        /* Custom scrollbar for horizontal slider */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -26,14 +25,14 @@
         }
     </style>
 </head>
-<body class="selection:bg-amber-800 selection:text-white">
+<body class="selection:bg-amber-800 selection:text-white relative">
 
     <!-- Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcf9f5]/80 backdrop-blur-md border-b border-amber-900/10 transition-all duration-300">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcf9f5]/85 backdrop-blur-md border-b border-amber-900/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-full bg-[#5c3a21] flex items-center justify-center text-white font-serif font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
-                    H
+                <div class="w-11 h-11 rounded-full bg-[#5c3a21] flex items-center justify-center overflow-hidden shadow-md group-hover:scale-105 transition-transform border border-amber-800/20">
+                    <img src="1000044858_2.jpg" alt="Hazelnut Creamery Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="flex flex-col">
                     <span class="font-serif font-bold text-lg tracking-wide text-[#5c3a21]">HAZELNUT</span>
@@ -48,20 +47,27 @@
                 <a href="#treats" class="hover:text-amber-800 transition-colors">Highlights</a>
             </nav>
 
-            <a href="#menu" class="bg-[#5c3a21] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:bg-[#432917] transition-all transform hover:-translate-y-0.5">
-                Explore Menu
+            <a href="https://wa.me/918919308595?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20flavours%20and%20treats." target="_blank" class="bg-[#5c3a21] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:bg-[#432917] transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp
             </a>
         </div>
     </header>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/918919308595?text=Hi!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-300 group" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-white text-[#2c221e] text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-100">
+            Chat with us!
+        </span>
+    </a>
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#f5ede4] to-[#fcf9f5]">
         <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Left Intro Content -->
             <div class="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-900/10 text-amber-900 text-xs font-semibold tracking-wide uppercase">
-                    <i class="fa-solid fa-ice-cream">></i> Est. March 2026
+                    <i class="fa-solid fa-ice-cream"></i> Est. March 2026
                 </div>
                 
                 <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#3a2518] leading-[1.1]">
@@ -97,13 +103,11 @@
                 </div>
             </div>
 
-            <!-- Right Hero Image Display -->
             <div class="lg:col-span-5 relative">
                 <div class="relative w-full aspect-square max-w-md mx-auto">
                     <div class="absolute inset-0 bg-amber-800/10 rounded-3xl transform rotate-3 scale-105"></div>
                     <img src="1000044861.jpg" alt="Death by Chocolate Sundae" class="relative rounded-3xl shadow-2xl object-cover w-full h-full transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                     
-                    <!-- Floating Badge -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-amber-900/10 animate-bounce">
                         <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 text-xl font-bold">
                             🍫
@@ -132,8 +136,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
                 <div class="md:col-span-5">
-                    <div class="rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
-                        <img src="1000044858.jpg" alt="Hazelnut Creamery Logo & Brand" class="w-full h-full object-cover">
+                    <div class="rounded-3xl overflow-hidden shadow-xl aspect-[4/5] border border-amber-900/10">
+                        <img src="1000044858_2.jpg" alt="Hazelnut Creamery Brand Logo" class="w-full h-full object-cover bg-[#fcf9f5] p-6">
                     </div>
                 </div>
                 
@@ -152,18 +156,18 @@
         </div>
     </section>
 
-    <!-- Menu & Horizontally Sliding New Flavours Section -->
+    <!-- Menu & Horizontally Sliding Flavours Section -->
     <section id="menu" class="py-24 bg-[#f5ede4]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                 <div>
-                    <span class="text-xs uppercase tracking-widest text-amber-800 font-bold mb-2 block">Our Offerings</span>
+                    <span class="text-xs uppercase tracking-widest text-amber-800 font-bold mb-2 block">Our Menu & Flavours</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#3a2518]">
-                        Featured Flavours & Treats
+                        Explore Our Artisanal Creations
                     </h2>
                 </div>
                 <p class="text-sm text-[#7c6353] mt-3 md:mt-0 max-w-xs">
-                    Slide horizontally to discover our newest creations and mouthwatering masterpieces.
+                    Slide horizontally to discover all our signature flavours, waffles, and treats in square showcase boxes.
                 </p>
             </div>
 
@@ -171,7 +175,7 @@
             <div class="relative">
                 <div id="slider" class="flex gap-6 overflow-x-auto no-scrollbar pb-6 pt-2 snap-x snap-mandatory">
                     
-                    <!-- Item 1 -->
+                    <!-- 1. Death by Chocolate -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
                             <img src="1000044861.jpg" alt="Death by Chocolate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -181,54 +185,103 @@
                         <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Rich fudge brownies, velvety vanilla ice cream topped with cascade chocolate & roasted cashews.</p>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- 2. Oreo Caramel Fudge -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
-                            <img src="1000044890.jpg" alt="Berry Jelly Bliss" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">New Flavour</span>
+                            <img src="1000044866.jpg" alt="Oreo Caramel Fudge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Berry Jelly Bliss</h3>
-                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Exotic fruit-infused ice cream loaded with soft chewy fruit jelly cubes and sweet syrup.</p>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Oreo Caramel Fudge</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Crunchy Oreo pieces showered over creamy caramel fudge ice cream.</p>
                     </div>
 
-                    <!-- Item 3 -->
+                    <!-- 3. Butterscotch -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
-                            <img src="1000044892.jpg" alt="Classic Belgian Chocolate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Handcrafted</span>
+                            <img src="1000044868.jpg" alt="Butterscotch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Belgian Chocolate Tubs</h3>
-                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Deep, luxurious cocoa notes churned into a creamy artisanal gelato experience.</p>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Butterscotch</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Golden crunchy praline bits folded into rich buttery caramel cream.</p>
                     </div>
 
-                    <!-- Item 4 -->
+                    <!-- 4. Mango -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
-                            <img src="1000044894.jpg" alt="Caramel Butterscotch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="1000044870.jpg" alt="Mango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Mango</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Ripe tropical Alphonso mango blended into a refreshing, smooth scoop.</p>
+                    </div>
+
+                    <!-- 5. Caramelized Pineapple -->
+                    <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                            <img src="1000044872.jpg" alt="Caramalized Pineapple" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Caramalized Pineapple</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Sweet caramelized pineapple chunks infused with creamy island notes.</p>
+                    </div>
+
+                    <!-- 6. Vanilla and Brownie Chunks -->
+                    <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                            <img src="1000044874.jpg" alt="Vanilla and brownie chunks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Vanilla & Brownie Chunks</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Classic aromatic vanilla bean loaded with decadent chocolate brownie bits.</p>
+                    </div>
+
+                    <!-- 7. Strawberry -->
+                    <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                            <img src="1000044876.jpg" alt="Strawberry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Strawberry</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Fresh garden strawberries churned into a delightfully pink, creamy treat.</p>
+                    </div>
+
+                    <!-- 8. Lotus Biscoff -->
+                    <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                            <img src="1000044878.jpg" alt="Lotus biscoff" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Flavour</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Lotus Biscoff</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Irresistible spiced caramel spread and cookie crumble in smooth ice cream.</p>
+                    </div>
+
+                    <!-- 9. Kheer -->
+                    <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                            <img src="1000044882.jpg" alt="Kheer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Specialty</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Salted Butterscotch Fudge</h3>
-                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Rich caramel drizzle over dense butterscotch ice cream with crunchy praline bits.</p>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Kheer</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Traditional Indian rice pudding reimagined as an aromatic frozen delicacy.</p>
                     </div>
 
-                    <!-- Item 5 -->
+                    <!-- 10. Jelly & Chocolate (Berry Jelly Bliss & Dutchmen Choco Brownie) -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
-                            <img src="1000044884.jpg" alt="Wild Blueberry Cream" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">New Flavour</span>
+                            <img src="1000044890.jpg" alt="Jelly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Jelly</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Wild Blueberry Cream</h3>
-                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Hand-picked fresh blueberries folded into creamy dairy goodness with purple silk ribbons.</p>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Jelly Fruit Delight</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Chewy fruit jelly cubes embedded in sweet berry-infused cream.</p>
                     </div>
 
-                    <!-- Item 6 -->
                     <div class="min-w-[280px] sm:min-w-[320px] bg-white rounded-3xl p-4 shadow-lg snap-start flex flex-col border border-amber-900/5 group hover:shadow-2xl transition-shadow">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
-                            <img src="1000044888.jpg" alt="Vanilla Bean Supreme" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Classic</span>
+                            <img src="1000044892.jpg" alt="Dutchmen choco brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-semibold">Chocolate</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Madagascar Vanilla Bean</h3>
-                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Pure organic vanilla pods scraped into rich cream for an unmatched aromatic finish.</p>
+                        <h3 class="font-serif font-bold text-lg text-[#3a2518]">Dutchmen Choco Brownie</h3>
+                        <p class="text-xs text-[#7c6353] mt-1 line-clamp-2">Deep dark Dutch cocoa blended with rich fudge brownie chunks.</p>
                     </div>
 
                 </div>
@@ -297,8 +350,8 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10 items-center border-b border-white/10 pb-12">
             <div class="md:col-span-6 space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-amber-800 flex items-center justify-center text-white font-serif font-bold text-lg">
-                        H
+                    <div class="w-10 h-10 rounded-full bg-amber-800 flex items-center justify-center overflow-hidden border border-amber-600/30">
+                        <img src="1000044858_2.jpg" alt="Logo" class="w-full h-full object-cover">
                     </div>
                     <span class="font-serif font-bold text-2xl tracking-wide">Hazelnut Creamery</span>
                 </div>
@@ -310,9 +363,9 @@
             <div class="md:col-span-6 flex flex-col md:items-end space-y-3">
                 <p class="text-xs uppercase tracking-widest text-amber-300 font-semibold">Waffles | Ice Creams | Milk Shakes</p>
                 <div class="flex gap-4 text-lg">
+                    <a href="https://wa.me/918919308595" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#25D366] transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-800 transition-colors"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-800 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber-800 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -325,4 +378,5 @@
 
 </body>
 </html>
+```eof
 
